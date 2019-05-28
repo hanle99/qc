@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sửa quảng cáo</title>
+    <link rel="stylesheet" href="resources/css/header.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="menu">
+        <div class="logo">
+          <a href="../../"><img onclick="alert('Bạn có chắc quay về trang chủ?(Các thay đổi của bạn sẽ không được lưu!)')"src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Logo shop"></a>
+        </div>
+      </div>
+    </div>
+<form  action="../../admin/suaqc" method="post" enctype="application/x-www-form-urlencoded">
+  <input type="hidden" name="txt_id" value="<%= sv.id %>"/>
+  link poster quảng cáo:<br/>
+  <input type="text" name="txt_img" value="<%= sv.img %>"/><br/>
+  link quảng cáo:<br/>
+  <input type="text" name="txt_link" value="<%= sv.link %>"/><br/>
+  <input type="submit" name="sua" onclick="alert('Sửa quảng cáo thành công!')" value=" sửa"/><br/>
+</form>
+  </body>
+</html>

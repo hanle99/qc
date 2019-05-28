@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>danh sách khuyến mãi</title>
+    <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+        th, td {
+          padding: 15px;
+        }
+        table tr:nth-child(even) {
+          background-color: #eee;
+        }
+        table tr:nth-child(odd) {
+          background-color: #fff;
+        }
+
+        table th {
+          background-color: Peru;
+          color: white;
+          font-size:20px;
+        }
+      </style>
+    <link rel="stylesheet" href="resources/css/header.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="header">
+      <div class="menu">
+        <div class="logo">
+          <a href="../../"><img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Logo shop"></a>
+        </div>
+      </div>
+    </div>
+    <table>
+      <caption style="font-size:25px;"><b>Danh sách các khuyến mãi hiện có</b></caption>
+      <tr>
+        <th>ID</th>
+        <th>ID sản phẩm</th>
+        <th>link poster khuyến mãi</th>
+        <th>link nội dung </th>
+        <th>giá khuyến mãi</th>
+        <th>giá gốc</th>
+        <th>ngày kết thúc</th>
+        <th colspan="2"><a href="../admin/themkm">thêm khuyến mãi</a></th>
+      </tr>
+      <% danhsach.rows.forEach(function(sv){ %>
+      <tr>
+        <td><%= sv.id %></td>
+        <td><%= sv.idsp %></td>
+        <td><%= sv.poster %></td>
+        <td><a href= "<%= sv.link_nd %>" ><%= sv.link_nd %></a></td>
+        <td><%= sv.gia %></td>
+        <td><%= sv.giatruoc %></td>
+        <td><%= sv.ngaykt %></td>
+        <td>
+          <a href="../admin/sua/<%= sv.id %>">sửa</a>
+          </td>
+          <td>
+          <a href="../admin/xoa/<%= sv.id %>">xóa</a>
+        </td>
+      </tr>
+      <%}); %>
+    </table>
+  </body>
+</html>

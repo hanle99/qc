@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sửa khuyến mãi</title>
+    <link rel="stylesheet" href="resources/css/header.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="menu">
+        <div class="logo">
+          <a href="../../"><img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Logo shop"></a>
+        </div>
+      </div>
+    </div>
+<form  action="../../admin/sua" method="post" enctype="application/x-www-form-urlencoded">
+  <input type="hidden" name="txt_id" value="<%= sv.id %>"/>
+  link poster:<br>
+  <input type="text" name="txt_poster" value="<%= sv.poster %>"/><br/>
+  link nội dung:<br>
+  <input type="text" name="txt_linknd" value="<%= sv.link_nd %>"/><br/>
+  ngày kết thúc:<br>
+  <input type="date" name="txt_ngaykt" value="<%= sv.ngaykt %>"/><br/>
+
+  <input type="submit" name="sua" onclick="alert('Sửa khuyến mãi thành công!')" value=" sửa"/><br/>
+</form>
+  </body>
+</html>

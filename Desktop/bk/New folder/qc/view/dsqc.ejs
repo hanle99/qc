@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>list qc</title>
+    <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+        th, td {
+          padding: 15px;
+        }
+        table tr:nth-child(even) {
+          background-color: #eee;
+        }
+        table tr:nth-child(odd) {
+          background-color: #fff;
+        }
+
+        table th {
+          background-color: Peru;
+          color: white;
+          font-size:20px;
+        }
+      </style>
+    <link rel="stylesheet" href="resources/css/header.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="menu">
+        <div class="logo">
+          <a href="../../"><img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Logo shop"></a>
+        </div>
+      </div>
+    </div>
+    <table width="500" border="1" >
+      <tr>
+        <th>id</th>
+        <th>img</th>
+        <th>link_qc</th>
+        <th colspan="2"><a href="../admin/themqc">thêm quảng cáo</a></th>
+      </tr>
+      <% danhsach.rows.forEach(function(sv){ %>
+      <tr>
+        <td><%= sv.id %></td>
+        <td><a href= "<%= sv.img %>" ><%= sv.img %></a></td>
+        <td><a href= "<%= sv.link %>" ><%= sv.link %></a></td>
+        <td>
+          <a href="../admin/suaqc/<%= sv.id %>">sửa</a>
+        </td>
+        <td>
+          <a href="../admin/xoaqc/<%= sv.id %>">xóa</a>
+        </td>
+      </tr>
+      <%}); %>
+    </table>
+  </body>
+</html>

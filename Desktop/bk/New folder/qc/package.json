@@ -1,0 +1,29 @@
+{
+  "name": "sociss-class-nodejs",
+  "version": "1.0.0",
+  "description": "Web project for assiment\u001b[D\u001b[D\u001b[D\u001b[Dgnment",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": "https://github.com/nghuuquyen/sociss-class-nodejs.git",
+  "keywords": [
+    "sociss",
+    "class",
+    "sociss",
+    "education",
+    "sociss",
+    "nodejs"
+  ],
+  "author": "Le Van Han",
+  "license": "MIT",
+  "dependencies": {
+    "@ionic/cli-utils": "^2.2.1",
+    "body-parser": "^1.19.0",
+    "ejc": "^1.0.4",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "express-hbs": "^2.1.2",
+    "pg": "^7.11.0"
+  }
+}
